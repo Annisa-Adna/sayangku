@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Daftar Ucapan</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f0f9ff;
+        color: #333;
+        text-align: center;
+        padding: 30px;
+        overflow-x: hidden;
+        animation: fadeInBody 2s ease-in;
+      }
+
+      @keyframes fadeInBody {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      h2 {
+        color: #0077cc;
+        margin-bottom: 20px;
+        animation: bounceIn 1.5s ease forwards;
+      }
+
+      @keyframes bounceIn {
+        0% {
+          opacity: 0;
+          transform: translateY(-50px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .ucapan-list {
+        max-width: 700px;
+        margin: 0 auto;
+        text-align: left;
+      }
+
+      .ucapan {
+        background-color: #fff;
+        padding: 20px;
+        margin: 15px 0;
+        border-radius: 10px;
+        border-left: 5px solid #0077cc;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        opacity: 0;
+        transform: translateY(30px);
+        animation: slideIn 0.8s ease forwards;
+      }
+
+      .ucapan:nth-child(1) {
+        animation-delay: 0.5s;
+      }
+      .ucapan:nth-child(2) {
+        animation-delay: 1s;
+      }
+      .ucapan:nth-child(3) {
+        animation-delay: 1.5s;
+      }
+
+      @keyframes slideIn {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .ucapan::before {
+        content: "💬 ";
+      }
+
+      .confetti {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background: #f06292;
+        top: 0;
+        animation: fall 3s linear infinite;
+        opacity: 0.7;
+      }
+
+      @keyframes fall {
+        0% {
+          transform: translateY(-100px) rotate(0);
+        }
+        100% {
+          transform: translateY(100vh) rotate(360deg);
+        }
+      }
+
+      .love {
+        position: fixed;
+        bottom: -20px;
+        font-size: 24px;
+        color: red;
+        animation: loveFloat 6s ease-in infinite;
+        opacity: 0.8;
+      }
+
+      @keyframes loveFloat {
+        0% {
+          transform: translateY(0) scale(1);
+          opacity: 0.8;
+        }
+        100% {
+          transform: translateY(-100vh) scale(1.5);
+          opacity: 0;
+        }
+      }
+
+      .zuno {
+        position: fixed;
+        bottom: -20px;
+        font-size: 28px;
+        font-weight: bold;
+        color: #e91e63;
+        animation: zunoFloat 7s ease-in infinite;
+        opacity: 0.9;
+      }
+
+      @keyframes zunoFloat {
+        0% {
+          transform: translateY(0) scale(1);
+          opacity: 0.9;
+        }
+        100% {
+          transform: translateY(-100vh) scale(1.6);
+          opacity: 0;
+        }
+      }
+
+      .audio-control {
+        margin-top: 30px;
+      }
+
+      button {
+        padding: 10px 20px;
+        background-color: #0077cc;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #005fa3;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Confetti -->
+    <div class="confetti" style="left: 10%; animation-delay: 0s"></div>
+    <div
+      class="confetti"
+      style="left: 30%; background: #4fc3f7; animation-delay: 0.5s"
+    ></div>
+    <div
+      class="confetti"
+      style="left: 50%; background: #ffb74d; animation-delay: 1s"
+    ></div>
+    <div
+      class="confetti"
+      style="left: 70%; background: #81c784; animation-delay: 1.2s"
+    ></div>
+    <div
+      class="confetti"
+      style="left: 90%; background: #ba68c8; animation-delay: 1.4s"
+    ></div>
+
+    <!-- Love animation -->
+    <div class="love" style="left: 15%; animation-delay: 0s">❤️</div>
+    <div class="love" style="left: 35%; animation-delay: 2s">❤️</div>
+    <div class="love" style="left: 55%; animation-delay: 4s">❤️</div>
+    <div class="love" style="left: 75%; animation-delay: 1s">❤️</div>
+    <div class="love" style="left: 85%; animation-delay: 3s">❤️</div>
+
+    <!-- ZUNO❤️ animation -->
+    <div class="zuno" style="left: 20%; animation-delay: 1s">ZUNO❤️</div>
+    <div class="zuno" style="left: 40%; animation-delay: 3s">ZUNO❤️</div>
+    <div class="zuno" style="left: 60%; animation-delay: 5s">ZUNO❤️</div>
+    <div class="zuno" style="left: 80%; animation-delay: 2s">ZUNO❤️</div>
+
+    <h2>💖 Ucapan Ulang Tahun</h2>
+
+    <div class="ucapan-list">
+      <div class="ucapan">
+        Selamat ulang tahun sayang kuuu, sehat-sehat, dilancarkan rezekinya,
+        dipermudahkan segala urusannya, terkabulkan apapun yang di inginkan,
+        semua hal baik selalu bersama mu. I LOVE YOU SAYANGGG ❤️🎉
+      </div>
+      <div class="ucapan">Wish you all the best di hari spesial ini 🥳</div>
+      <div class="ucapan">Happy Birthday! 🎂</div>
+    </div>
+  </body>
+</html>
